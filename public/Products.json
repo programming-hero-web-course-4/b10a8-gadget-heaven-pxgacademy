@@ -1,0 +1,474 @@
+[
+  {
+    "productID": "laptop001",
+    "productName": "Acer Aspire 5",
+    "category": "Laptop",
+    "image": "https://i.ibb.co.com/dP0Qjcx/Acer-Aspire-5-Intel-Core-i5.jpg",
+    "price": 549.99,
+    "description": "A reliable laptop with Intel Core i5 processor for work and entertainment.",
+    "specifications": [
+      "Intel Core i5",
+      "8GB RAM",
+      "512GB SSD",
+      "15.6-inch Full HD display",
+      "Windows 10 Home"
+    ],
+    "available": true,
+    "ratings": 4.3,
+    "brand": "Acer",
+    "weight": "1.8kg",
+    "color": "Silver"
+  },
+  {
+    "productID": "smartphone001",
+    "productName": "Samsung Galaxy S21",
+    "category": "Smartphone",
+    "image": "https://i.ibb.co.com/tJQKg6q/Samsung-Galaxy-S21.jpg",
+    "price": 799.99,
+    "description": "The next-gen smartphone with advanced camera and high speed.",
+    "specifications": [
+      "6.2-inch AMOLED display",
+      "128GB storage",
+      "64MP rear camera",
+      "8GB RAM",
+      "4000mAh battery"
+    ],
+    "available": true,
+    "ratings": 4.6,
+    "brand": "Samsung",
+    "weight": "169g",
+    "color": "Phantom Gray"
+  },
+  {
+    "productID": "smartwatch001",
+    "productName": "Apple Watch Series 7",
+    "category": "Smart Watch",
+    "image": "https://i.ibb.co.com/hgDjrwW/apple-watch-series-7-45mm-gps-smartwatch-300x300.jpg",
+    "price": 399.99,
+    "description": "Apple's latest smartwatch with fitness tracking.",
+    "specifications": [
+      "41mm display",
+      "Always-On Retina display",
+      "GPS and Cellular",
+      "Water resistant up to 50m",
+      "18-hour battery life"
+    ],
+    "available": true,
+    "ratings": 4.8,
+    "brand": "Apple",
+    "weight": "32g",
+    "color": "Blue"
+  },
+  {
+    "productID": "macbook001",
+    "productName": "MacBook Pro 14-inch",
+    "category": "MacBook",
+    "image": "https://i.ibb.co.com/qgpmFTb/Mac-Book-Pro-14-inch.jpg",
+    "price": 1999.99,
+    "description": "MacBook Pro with M1 Pro chip for professional performance.",
+    "specifications": [
+      "Apple M1 Pro",
+      "16GB RAM",
+      "512GB SSD",
+      "14.2-inch Retina display",
+      "macOS Monterey"
+    ],
+    "available": true,
+    "ratings": 4.9,
+    "brand": "Apple",
+    "weight": "1.6kg",
+    "color": "Space Gray"
+  },
+  {
+    "productID": "powerbank001",
+    "productName": "Anker PowerCore 20100",
+    "category": "Power Bank",
+    "image": "https://i.ibb.co.com/b3P8dpR/Anker-Power-Core-20100.jpg",
+    "price": 49.99,
+    "description": "High-capacity power bank for extended use.",
+    "specifications": [
+      "20100mAh capacity",
+      "2 USB-A ports",
+      "Fast charging",
+      "Portable design"
+    ],
+    "available": true,
+    "ratings": 4.7,
+    "brand": "Anker",
+    "weight": "356g",
+    "color": "Black"
+  },
+  {
+    "productID": "accessory001",
+    "productName": "Logitech MX Master 3",
+    "category": "Accessory",
+    "image": "https://i.ibb.co.com/cy2JBZD/Logitech-MX-Master-3.jpg",
+    "price": 99.99,
+    "description": "Ergonomic mouse with customizable buttons.",
+    "specifications": [
+      "Ergonomic design",
+      "USB-C charging",
+      "7 customizable buttons",
+      "Bluetooth connectivity"
+    ],
+    "available": true,
+    "ratings": 4.8,
+    "brand": "Logitech",
+    "weight": "141g",
+    "color": "Graphite"
+  },
+  {
+    "productID": "laptop002",
+    "productName": "Dell XPS 13",
+    "category": "Laptop",
+    "image": "https://i.ibb.co.com/LgTRxcy/Dell-XPS-13.jpg",
+    "price": 1199.99,
+    "description": "Lightweight laptop with a stunning display.",
+    "specifications": [
+      "Intel Core i7",
+      "16GB RAM",
+      "512GB SSD",
+      "13.4-inch 4K UHD display",
+      "Windows 11 Home"
+    ],
+    "available": true,
+    "ratings": 4.8,
+    "brand": "Dell",
+    "weight": "1.2kg",
+    "color": "Platinum Silver"
+  },
+  {
+    "productID": "smartphone002",
+    "productName": "iPhone 13",
+    "category": "Smartphone",
+    "image": "https://i.ibb.co.com/WtPJ547/i-Phone-13.jpg",
+    "price": 899.99,
+    "description": "Latest iPhone with A15 Bionic chip.",
+    "specifications": [
+      "6.1-inch Super Retina XDR display",
+      "128GB storage",
+      "12MP dual-camera",
+      "5G enabled",
+      "3095mAh battery"
+    ],
+    "available": true,
+    "ratings": 4.9,
+    "brand": "Apple",
+    "weight": "174g",
+    "color": "Midnight"
+  },
+  {
+    "productID": "smartwatch002",
+    "productName": "Samsung Galaxy Watch 4",
+    "category": "Smart Watch",
+    "image": "https://i.ibb.co.com/5kYjFCW/Samsung-Galaxy-Watch-4.jpg",
+    "price": 249.99,
+    "description": "Smartwatch with body composition analysis.",
+    "specifications": [
+      "44mm display",
+      "Wear OS by Google",
+      "Body composition analysis",
+      "40 hours battery life",
+      "Bluetooth and Wi-Fi"
+    ],
+    "available": true,
+    "ratings": 4.5,
+    "brand": "Samsung",
+    "weight": "30g",
+    "color": "Black"
+  },
+  {
+    "productID": "macbook002",
+    "productName": "MacBook Air M1",
+    "category": "MacBook",
+    "image": "https://i.ibb.co.com/sJkpyj4/Mac-Book-Air-M1.jpg",
+    "price": 999.99,
+    "description": "Lightweight MacBook with M1 chip.",
+    "specifications": [
+      "Apple M1",
+      "8GB RAM",
+      "256GB SSD",
+      "13.3-inch Retina display",
+      "macOS Big Sur"
+    ],
+    "available": true,
+    "ratings": 4.7,
+    "brand": "Apple",
+    "weight": "1.29kg",
+    "color": "Space Gray"
+  },
+  {
+    "productID": "powerbank002",
+    "productName": "RAVPower 10000mAh",
+    "category": "Power Bank",
+    "image": "https://i.ibb.co.com/2jM8Xpc/RAVPower-10000m-Ah.jpg",
+    "price": 29.99,
+    "description": "Compact power bank with fast charging.",
+    "specifications": [
+      "10000mAh capacity",
+      "2 USB-A ports",
+      "Quick Charge 3.0",
+      "LED indicator"
+    ],
+    "available": true,
+    "ratings": 4.5,
+    "brand": "RAVPower",
+    "weight": "230g",
+    "color": "White"
+  },
+  {
+    "productID": "accessory002",
+    "productName": "Sony WH-1000XM4",
+    "category": "Accessory",
+    "image": "https://i.ibb.co.com/tMGVhHb/Sony-WH-1000-XM4.jpg",
+    "price": 349.99,
+    "description": "Noise-canceling headphones with premium sound.",
+    "specifications": [
+      "Over-ear design",
+      "Active noise-canceling",
+      "30 hours battery life",
+      "Bluetooth 5.0"
+    ],
+    "available": true,
+    "ratings": 4.9,
+    "brand": "Sony",
+    "weight": "254g",
+    "color": "Black"
+  },
+  {
+    "productID": "laptop003",
+    "productName": "HP Spectre x360",
+    "category": "Laptop",
+    "image": "https://i.ibb.co.com/HY3CKX7/HP-Spectre-x360.jpg",
+    "price": 1299.99,
+    "description": "Convertible laptop with touch screen.",
+    "specifications": [
+      "Intel Core i7",
+      "16GB RAM",
+      "512GB SSD",
+      "13.3-inch FHD touch display",
+      "Windows 11 Home"
+    ],
+    "available": true,
+    "ratings": 4.6,
+    "brand": "HP",
+    "weight": "1.3kg",
+    "color": "Dark Ash Silver"
+  },
+  {
+    "productID": "smartphone003",
+    "productName": "OnePlus 9 Pro",
+    "category": "Smartphone",
+    "image": "https://i.ibb.co.com/z50T9YR/One-Plus-9-Pro.jpg",
+    "price": 699.99,
+    "description": "Flagship smartphone with fast charging and great camera.",
+    "specifications": [
+      "6.7-inch AMOLED display",
+      "256GB storage",
+      "48MP quad-camera",
+      "12GB RAM",
+      "4500mAh battery"
+    ],
+    "available": true,
+    "ratings": 4.5,
+    "brand": "OnePlus",
+    "weight": "197g",
+    "color": "Morning Mist"
+  },
+  {
+    "productID": "smartwatch003",
+    "productName": "Fitbit Versa 3",
+    "category": "Smart Watch",
+    "image": "https://i.ibb.co.com/L6XvKZF/Fitbit-Versa-3.jpg",
+    "price": 229.99,
+    "description": "Smartwatch for fitness and health tracking.",
+    "specifications": [
+      "1.58-inch display",
+      "Built-in GPS",
+      "Heart rate monitor",
+      "6-day battery life",
+      "Sleep tracking"
+    ],
+    "available": true,
+    "ratings": 4.4,
+    "brand": "Fitbit",
+    "weight": "28g",
+    "color": "Pink Clay"
+  },
+  {
+    "productID": "macbook003",
+    "productName": "MacBook Pro 16-inch",
+    "category": "MacBook",
+    "image": "https://i.ibb.co.com/kxb76S9/Mac-Book-Pro-16-inch.jpg",
+    "price": 2499.99,
+    "description": "High-performance MacBook with M1 Max chip.",
+    "specifications": [
+      "Apple M1 Max",
+      "32GB RAM",
+      "1TB SSD",
+      "16.2-inch Retina display",
+      "macOS Monterey"
+    ],
+    "available": true,
+    "ratings": 4.9,
+    "brand": "Apple",
+    "weight": "2.1kg",
+    "color": "Silver"
+  },
+  {
+    "productID": "powerbank003",
+    "productName": "Xiaomi Mi Power Bank 3",
+    "category": "Power Bank",
+    "image": "https://i.ibb.co.com/SQzd6H9/Xiaomi-Mi-Power-Bank-3.jpg",
+    "price": 39.99,
+    "description": "High-capacity power bank with quick charging.",
+    "specifications": [
+      "30000mAh capacity",
+      "USB-C and USB-A ports",
+      "18W fast charging",
+      "Battery level indicator"
+    ],
+    "available": true,
+    "ratings": 4.6,
+    "brand": "Xiaomi",
+    "weight": "400g",
+    "color": "Black"
+  },
+  {
+    "productID": "accessory003",
+    "productName": "Apple Magic Keyboard",
+    "category": "Accessory",
+    "image": "https://i.ibb.co.com/Wvjfwgr/Apple-Magic-Keyboard.jpg",
+    "price": 99.99,
+    "description": "Wireless keyboard with a compact design.",
+    "specifications": [
+      "Compact design",
+      "Bluetooth connectivity",
+      "Rechargeable battery",
+      "Quiet keys"
+    ],
+    "available": true,
+    "ratings": 4.7,
+    "brand": "Apple",
+    "weight": "231g",
+    "color": "White"
+  },
+  {
+    "productID": "laptop004",
+    "productName": "Lenovo ThinkPad X1 Carbon",
+    "category": "Laptop",
+    "image": "https://i.ibb.co.com/WFRkW69/Lenovo-Think-Pad-X1-Carbon.jpg",
+    "price": 1449.99,
+    "description": "Lightweight and durable laptop for business.",
+    "specifications": [
+      "Intel Core i7",
+      "16GB RAM",
+      "1TB SSD",
+      "14-inch FHD display",
+      "Windows 10 Pro"
+    ],
+    "available": true,
+    "ratings": 4.8,
+    "brand": "Lenovo",
+    "weight": "1.09kg",
+    "color": "Black"
+  },
+  {
+    "productID": "smartphone004",
+    "productName": "Google Pixel 6",
+    "category": "Smartphone",
+    "image": "https://i.ibb.co.com/W2VvFwh/Google-Pixel-6.jpg",
+    "price": 599.99,
+    "description": "Google's latest smartphone with advanced AI features.",
+    "specifications": [
+      "6.4-inch OLED display",
+      "128GB storage",
+      "50MP rear camera",
+      "8GB RAM",
+      "4600mAh battery"
+    ],
+    "available": true,
+    "ratings": 4.6,
+    "brand": "Google",
+    "weight": "207g",
+    "color": "Stormy Black"
+  },
+  {
+    "productID": "smartwatch004",
+    "productName": "Garmin Venu 2",
+    "category": "Smart Watch",
+    "image": "https://i.ibb.co.com/K09qJJb/Garmin-Venu-2.jpg",
+    "price": 349.99,
+    "description": "Smartwatch for advanced fitness tracking.",
+    "specifications": [
+      "1.3-inch AMOLED display",
+      "GPS and heart rate monitor",
+      "Up to 11 days battery life",
+      "Sleep tracking",
+      "Water resistant"
+    ],
+    "available": true,
+    "ratings": 4.7,
+    "brand": "Garmin",
+    "weight": "49g",
+    "color": "Slate"
+  },
+  {
+    "productID": "macbook004",
+    "productName": "MacBook Air 13-inch",
+    "category": "MacBook",
+    "image": "https://i.ibb.co.com/bKf1Yjh/Mac-Book-Air-13-inch.jpg",
+    "price": 999.99,
+    "description": "Lightweight MacBook with Retina display.",
+    "specifications": [
+      "Apple M1",
+      "8GB RAM",
+      "256GB SSD",
+      "13.3-inch Retina display",
+      "macOS Big Sur"
+    ],
+    "available": true,
+    "ratings": 4.7,
+    "brand": "Apple",
+    "weight": "1.25kg",
+    "color": "Gold"
+  },
+  {
+    "productID": "powerbank004",
+    "productName": "Samsung 10000mAh Wireless Power Bank",
+    "category": "Power Bank",
+    "image": "https://i.ibb.co.com/CmPKjwW/Samsung-10000m-Ah-Wireless-Power-Bank.jpg",
+    "price": 49.99,
+    "description": "Wireless power bank with fast charging.",
+    "specifications": [
+      "10000mAh capacity",
+      "USB-C port",
+      "Wireless charging pad",
+      "Fast charging support"
+    ],
+    "available": true,
+    "ratings": 4.5,
+    "brand": "Samsung",
+    "weight": "236g",
+    "color": "Silver"
+  },
+  {
+    "productID": "accessory004",
+    "productName": "Dell USB-C Dock",
+    "category": "Accessory",
+    "image": "https://i.ibb.co.com/jwbB2Cn/Dell-USB-C-Dock.jpg",
+    "price": 179.99,
+    "description": "Universal dock for multiple device connections.",
+    "specifications": [
+      "USB-C connectivity",
+      "Dual monitor support",
+      "HDMI and DisplayPort",
+      "Ethernet port"
+    ],
+    "available": true,
+    "ratings": 4.3,
+    "brand": "Dell",
+    "weight": "292g",
+    "color": "Black"
+  }
+]
