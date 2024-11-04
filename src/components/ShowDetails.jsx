@@ -2,10 +2,13 @@ import { useLoaderData, useParams } from "react-router-dom";
 import Ratings from "./ratings/Ratings";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { setToLS } from "../utils/LocalStorage";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { toast } from "react-toastify";
+import { CartLength, WishLength } from "../Root";
 
 const ShowDetails = () => {
+  const [cartLength, setCartLength] = useContext(CartLength)
+  const [wishLength, setWishLength] = useContext(WishLength)
   const [cartBtnDisable, setCartBtnDisable] = useState(false);
   const [wishBtnDisable, setWishBtnDisable] = useState(false);
   const { pId } = useParams();
@@ -67,6 +70,7 @@ const ShowDetails = () => {
                     onClick={() => {
                       handleLS("Cart");
                       toast.success('Product successfully added to Cart')
+                      setCartLength(cartLength + 1);
                       setCartBtnDisable(true);
                     }}
                     disabled={cartBtnDisable}
@@ -78,6 +82,7 @@ const ShowDetails = () => {
                     onClick={() => {
                       handleLS("Wish");
                       toast.success('Product successfully added to Wishlist')
+                      setWishLength(wishLength + 1);
                       setWishBtnDisable(true);
                     }}
                     disabled={wishBtnDisable}

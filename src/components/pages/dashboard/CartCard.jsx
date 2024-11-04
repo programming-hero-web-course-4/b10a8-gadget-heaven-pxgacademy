@@ -1,7 +1,11 @@
 import PropTypes from "prop-types";
+import { useContext } from "react";
 import { IoClose } from "react-icons/io5";
+import { CartLength } from "../../../Root";
+import { toast } from "react-toastify";
 
 const CartCard = ({ item, handleClearFromLS }) => {
+  const [cartLength, setCartLength] = useContext(CartLength);
   const { productID, image, productName, price, description } = item;
   return (
     <div className="flex items-center border border-zinc-300 rounded-2xl p-5">
@@ -16,7 +20,11 @@ const CartCard = ({ item, handleClearFromLS }) => {
         </div>
         <div>
           <button
-            onClick={() => handleClearFromLS(productID, "Cart")}
+            onClick={() => {
+              handleClearFromLS(productID, "Cart");
+              setCartLength(cartLength - 1);
+              toast.error('Remove the product from the cart')
+            }}
             className="text-xl text-red-500 border-2 border-red-500 rounded-full p-2"
           >
             <IoClose />

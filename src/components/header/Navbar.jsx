@@ -1,13 +1,15 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import NavList from "./NavList";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
+import { useContext } from "react";
+import { CartLength, WishLength } from "../../Root";
 import { getFromLS } from "../../utils/LocalStorage";
-import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [cartLength, setCartLength] = useContext(CartLength);
+  const [wishLength, setWishLength] = useContext(WishLength);
   const location = useLocation();
   const pathName = location.pathname;
-  const [iconV, setIconV] = useState({ cart: 0, wish: 0 });
 
   const navbar = [
     {
@@ -32,16 +34,21 @@ const Navbar = () => {
     },
   ];
 
-  const handleIconV = () => {
-    const cart = getFromLS("cart");
-    const wish = getFromLS("wish");
-    setIconV({ cart: cart.length, wish: wish.length });
-    console.log('ami');
-  };
+  const cart = getFromLS("Cart");
 
-  useEffect(() => {
-    handleIconV();
-  }, []);
+  if (cart) {
+    setCartLength(cart.length);
+  } else {
+    setCartLength(0);
+  }
+
+  const wish = getFromLS("Wish");
+
+  if (wish) {
+    setWishLength(wish.length);
+  } else {
+    setWishLength(0);
+  }
 
   return (
     <nav
@@ -69,11 +76,13 @@ const Navbar = () => {
 
         <div className="flex items-center gap-x-6">
           <div className="relative">
-            <button className="bg-zinc-100 p-2 rounded-full text-xl">
-              <FaShoppingCart />
-            </button>
+            <Link to="/dashboard">
+              <button className="bg-zinc-100 p-2 rounded-full text-xl">
+                <FaShoppingCart />
+              </button>
+            </Link>
             <span className="absolute -top-5 left-7 bg-white py-1 px-2 text-red-500 rounded-full">
-              {iconV.cart}
+              {cartLength}
             </span>
           </div>
           <div className="relative">
@@ -81,7 +90,7 @@ const Navbar = () => {
               <FaHeart />
             </button>
             <span className="absolute -top-5 left-7 bg-white py-1 px-2 text-red-500 rounded-full">
-              {iconV.wish}
+              {wishLength}
             </span>
           </div>
         </div>
