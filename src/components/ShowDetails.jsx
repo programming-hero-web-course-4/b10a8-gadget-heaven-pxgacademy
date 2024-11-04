@@ -1,11 +1,20 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Ratings from "./ratings/Ratings";
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
+import { setToLS } from "../utils/LocalStorage";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 const ShowDetails = () => {
+  const [cartBtnDisable, setCartBtnDisable] = useState(false);
+  const [wishBtnDisable, setWishBtnDisable] = useState(false);
   const { pId } = useParams();
   const data = useLoaderData();
   const item = data.find((p) => p.productID === pId);
+
+  const handleLS = (keyName) => {
+    setToLS(item.productID, keyName);
+  };
 
   const { image, productName, price, available, description, specifications } =
     item;
@@ -54,10 +63,26 @@ const ShowDetails = () => {
                 <Ratings />
 
                 <div className="flex items-center gap-5 mt-5">
-                  <button className="flex items-center gap-2 bg-primary text-white py-2 px-6 rounded-full">
-                    Add to Cart <FaShoppingCart />{" "}
+                  <button
+                    onClick={() => {
+                      handleLS("Cart");
+                      toast.success('Product successfully added to Cart')
+                      setCartBtnDisable(true);
+                    }}
+                    disabled={cartBtnDisable}
+                    className="flex items-center gap-2 bg-primary text-white py-2 px-6 rounded-full"
+                  >
+                    Add to Cart <FaShoppingCart />
                   </button>
-                  <button className="border border-zinc-400 p-2 rounded-full">
+                  <button
+                    onClick={() => {
+                      handleLS("Wish");
+                      toast.success('Product successfully added to Wishlist')
+                      setWishBtnDisable(true);
+                    }}
+                    disabled={wishBtnDisable}
+                    className="border border-zinc-400 p-2 rounded-full"
+                  >
                     <FaHeart />
                   </button>
                 </div>

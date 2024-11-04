@@ -33,7 +33,7 @@ const Navbar = () => {
     <nav
       className={`
             ${pathName === "/" ? "bg-primary" : "bg-transparent"}
-            w-full py-8 rounded-t-3xl`}
+            w-full py-8 px-5 rounded-t-3xl`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <h3
