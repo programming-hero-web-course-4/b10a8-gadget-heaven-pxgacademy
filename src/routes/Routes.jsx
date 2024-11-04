@@ -1,21 +1,20 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Root";
-import ErrorPage from "../errorPage/ErrorPage";
+// import ErrorPage from "../errorPage/ErrorPage";
 import Home from "../components/pages/home/Home";
 import Statistics from "../components/pages/statistics/Statistics";
 import Dashboard from "../components/pages/dashboard/Dashboard";
 import Blogs from "../components/pages/blogs/Blogs";
-
+import ShowDetails from "../components/ShowDetails";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    errorElement: <ErrorPage />,
+    // errorElement: <ErrorPage />,
     element: <Root />,
     children: [
       {
         path: "/",
-        loader: () => fetch("./Products.json"),
         element: <Home />,
       },
       {
@@ -29,6 +28,11 @@ export const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs />,
+      },
+      {
+        path: "/product/details/:pId",
+        element: <ShowDetails />,
+        loader: () => fetch('/products.json')
       },
     ],
   },

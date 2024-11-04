@@ -309,7 +309,7 @@
       "16.2-inch Retina display",
       "macOS Monterey"
     ],
-    "available": true,
+    "available": false,
     "ratings": 4.9,
     "brand": "Apple",
     "weight": "2.1kg",
@@ -407,7 +407,7 @@
       "Sleep tracking",
       "Water resistant"
     ],
-    "available": true,
+    "available": false,
     "ratings": 4.7,
     "brand": "Garmin",
     "weight": "49g",

@@ -1,14 +1,9 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 import CardList from "./CardList";
-import { useLoaderData } from "react-router-dom";
 import ProductCard from "./ProductCard";
 
-const GadgetCards = () => {
-  const data = useLoaderData();
-  const [activeList, setActiveList] = useState({
-    index: 0,
-    activeList: "All Products",
-  });
+const GadgetCards = ({ data }) => {
   const cardList = [
     { name: "All Products", category: "All Products" },
     { name: "Laptops", category: "Laptop" },
@@ -18,10 +13,12 @@ const GadgetCards = () => {
     { name: "MacBooks", category: "MacBook" },
     { name: "Power Banks", category: "Power Bank" },
   ];
+  const [activeList, setActiveList] = useState({
+    index: 0,
+    activeList: "All Products",
+  });
 
-
-
-  const getFilteredProducts = () => {
+  const filteredData = () => {
     if (activeList.activeList === "All Products") {
       return data;
     }
@@ -50,13 +47,17 @@ const GadgetCards = () => {
         </div>
 
         <div className="w-[80%] grid grid-cols-3 gap-5">
-          {getFilteredProducts().map((item, index) => (
+          {filteredData().map((item, index) => (
             <ProductCard key={index} item={item} />
           ))}
         </div>
       </div>
     </div>
   );
+};
+
+GadgetCards.propTypes = {
+  data: PropTypes.array.isRequired,
 };
 
 export default GadgetCards;
