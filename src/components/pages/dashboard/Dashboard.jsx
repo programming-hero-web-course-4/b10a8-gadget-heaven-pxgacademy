@@ -8,7 +8,7 @@ const Dashboard = () => {
   const data = useLoaderData();
 
   return (
-    <section>
+    <section className="pb-16">
       <div className="bg-primary w-full px-5">
         <div className="max-w-7xl mx-auto py-12">
           <div className="text-white text-center max-w-2xl mx-auto">
