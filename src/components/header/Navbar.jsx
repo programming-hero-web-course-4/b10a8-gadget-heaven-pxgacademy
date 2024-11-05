@@ -4,10 +4,10 @@ import { FaShoppingCart, FaHeart } from "react-icons/fa";
 import { useContext, useState } from "react";
 import { CartLength, WishLength } from "../../Root";
 import { getFromLS } from "../../utils/LocalStorage";
-import Hamburger from 'hamburger-react'
+import Hamburger from "hamburger-react";
 
 const Navbar = () => {
-  const [isOpen, setOpen] = useState(false)
+  const [isOpen, setOpen] = useState(false);
   const [cartLength, setCartLength] = useContext(CartLength);
   const [wishLength, setWishLength] = useContext(WishLength);
   const location = useLocation();
@@ -58,28 +58,32 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <div className="flex items-center gap-x-2">
-        <span className={`lg:hidden ${pathName === "/" ? "text-white" : "text-primary"}`}>
-        <Hamburger toggled={isOpen} toggle={setOpen} />
-        </span>
-        <h3
-          className={`${
-            pathName === "/" ? "text-white" : "text-primary"
-          } text-xl font-semibold`}
-        >
-          Gadget Heaven
-        </h3>
+          <span
+            className={`lg:hidden ${
+              pathName === "/" ? "text-white" : "text-primary"
+            }`}
+          >
+            <Hamburger toggled={isOpen} toggle={setOpen} />
+          </span>
+          <h3
+            className={`${
+              pathName === "/" ? "text-white" : "text-primary"
+            } text-xl font-semibold`}
+          >
+            Gadget Heaven
+          </h3>
         </div>
 
-        
         <ul
-          className={`absolute lg:sticky ${isOpen? 'top-24' : '-top-60'} duration-300 border lg:border-none border-zinc-400 rounded-lg px-4 py-6 lg:p-0 bg-primary/60 lg:bg-transparent backdrop-blur flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:items-center gap-x-1
+          className={`absolute z-10 lg:sticky ${
+            isOpen ? "top-24" : "-top-60"
+          } duration-300 border lg:border-none border-zinc-400 rounded-lg px-4 py-6 lg:p-0 bg-primary/60 lg:bg-transparent backdrop-blur flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:items-center gap-x-1
             ${pathName === "/" ? "text-white" : "text-white lg:text-primary"}`}
         >
           {navbar.map((list) => (
             <NavList key={list.id} list={list} />
           ))}
         </ul>
-      
 
         <div className="flex items-center gap-x-6">
           <div className="relative">
