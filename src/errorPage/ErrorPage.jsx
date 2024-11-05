@@ -1,14 +1,16 @@
 const ErrorPage = () => {
   return (
-    <section className="max-w-7xl h-screen mx-auto flex items-center justify-center">
-      <h2 className="text-5xl text-center leading-tight">
-        ভুল জায়গায় আসছেন! 😢
-        <br />
-        দয়া করে আগের জায়গায় যান।
-        <br />
-        <br />
-        কি আছে জীবনে??? 😜
-      </h2>
+    <section className="w-full bg-white">
+      <div className="max-w-7xl h-screen mx-auto flex items-center justify-center">
+        
+      <div>
+        <img src="https://ecommax.risingbamboo.com/wp-content/uploads/2024/09/404-animation.gif" alt="" />
+        <h1 className="text-3xl md:text-5xl font-bold text-center text-green-800/60">কি আছে জীবনে???</h1>
+        <p className="text-center text-5xl mt-5">
+        😜
+        </p>
+      </div>
+      </div>
     </section>
   );
 };
