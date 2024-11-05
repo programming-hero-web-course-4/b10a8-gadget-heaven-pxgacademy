@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Banner from "./Banner";
 import GadgetCards from "./GadgetCards";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const [cards, setCards] = useState([]);
@@ -11,11 +12,20 @@ const Home = () => {
       .then((data) => setCards(data));
   }, []);
 
+
+
   return (
-    <section className="px-8">
+    <>
+    <Helmet>
+      <title>
+        Home | Gadget Heaven
+      </title>
+    </Helmet>
+    <section className="px-8 pb-16">
       <Banner />
       <GadgetCards data={cards} />
     </section>
+    </>
   );
 };
 
