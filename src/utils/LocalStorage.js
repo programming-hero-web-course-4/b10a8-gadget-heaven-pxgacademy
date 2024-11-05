@@ -18,7 +18,7 @@ const setToLS = (items, keyName) => {
 
 //
 //
-const clearLS = (keyName) => localStorage.clear(keyName);
+const clearLS = (keyName) => localStorage.removeItem(keyName);
 
 //
 //

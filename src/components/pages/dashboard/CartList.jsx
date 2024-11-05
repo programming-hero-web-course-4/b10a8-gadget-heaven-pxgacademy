@@ -1,10 +1,13 @@
 import PropTypes from "prop-types";
-import { clearFromLS, getFromLS } from "../../../utils/LocalStorage";
-import { useEffect, useState } from "react";
+import { clearFromLS, clearLS, getFromLS } from "../../../utils/LocalStorage";
+import { useContext, useEffect, useState } from "react";
 import CartCard from "./CartCard";
 import { BsSortNumericDownAlt } from "react-icons/bs";
+import pIcon from "../../../assets/Group.png";
+import { CartLength } from "../../../Root";
 
 const CartList = ({ data }) => {
+  const [, setCartLength] = useContext(CartLength);
   const [filteredData, setFilteredData] = useState([]);
   const [totalCost, setTotalCost] = useState(0);
   const storedData = getFromLS("Cart");
@@ -45,6 +48,18 @@ const CartList = ({ data }) => {
     setTotalCost(cost);
   };
 
+  const handlePurchase = () => {
+    document.getElementById("my_modal_5").showModal();
+  };
+
+  const handleModalClose = () => {
+    // document.getElementById("my_modal_5").close();
+    setTotalCost(0);
+    setFilteredData([]);
+    clearLS("Cart");
+    setCartLength(0);
+  };
+
   return (
     <section className="px-5">
       <div className="max-w-7xl mx-auto">
@@ -58,7 +73,10 @@ const CartList = ({ data }) => {
             >
               Sort by price <BsSortNumericDownAlt />
             </button>
-            <button className="py-2 px-6 border-2 border-primary rounded-full bg-primary text-white">
+            <button
+              onClick={handlePurchase}
+              className="py-2 px-6 border-2 border-primary rounded-full bg-primary text-white"
+            >
               Purchase
             </button>
           </div>
@@ -79,6 +97,29 @@ const CartList = ({ data }) => {
           )}
         </div>
       </div>
+
+      <section>
+        <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+          <div className="modal-box text-center">
+            <img className="p-4 mx-auto" src={pIcon} alt="icon" />
+            <h3 className="font-bold text-2xl border-b pb-3">
+              Payment Successfully Paid!
+            </h3>
+            <p className="py-4 text-xl text-zinc-500">Thanks for purchasing.</p>
+            <p className="text-lg font-semibold">Total: ${totalCost}</p>
+            <div className="modal-action">
+              <form method="dialog" className="w-full">
+                <button
+                  onClick={handleModalClose}
+                  className="w-full bg-zinc-300 hover:bg-zinc-200 py-2 rounded-full text-lg font-semibold"
+                >
+                  Close
+                </button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </section>
     </section>
   );
 };
