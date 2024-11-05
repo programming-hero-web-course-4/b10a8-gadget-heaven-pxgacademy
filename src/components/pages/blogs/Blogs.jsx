@@ -16,15 +16,17 @@ const Blogs = () => {
         <div className="max-w-7xl mx-auto py-12">
           <div className="relative w-full">
             <img className="w-full" src={bannerImg} alt="" />
-            <div className="absolute bottom-10 left-10">
-              <button className="bg-primary py-2 px-6 mb-3 text-white font-semibold rounded">
+            <div className="absolute lg:bottom-10 bottom-2 left-2 lg:left-10">
+              <button className="bg-primary lg:py-2 py-1 lg:px-6 px-2 mb-3 text-white text-sm lg:text-base lg:font-semibold rounded">
                 GAMING
               </button>
-              <h2 className="text-4xl font-semibold text-white">
+              <h2 className="text-base lg:text-4xl font-semibold text-white">
                 Oculus Quest X Headset: <br />
                 Discover a Shining New Star
               </h2>
-              <p className="text-zinc-300 mt-3">Abdullah - Jan 5, 2024</p>
+              <p className="text-zinc-300 lg:mt-3 lg:text-base text-sm">
+                Abdullah - Jan 5, 2024
+              </p>
             </div>
           </div>
 
@@ -43,17 +45,19 @@ const Blogs = () => {
             </div>
           </div>
 
-          <div className="relative w-full mt-10">
+          <div className="relative w-full mt-10 lg:mt-20">
             <img className="w-full" src={banner} alt="" />
-            <div className="absolute bottom-10 left-10">
-              <button className="bg-primary py-2 px-6 mb-3 text-white font-semibold rounded">
+            <div className="absolute lg:bottom-10 bottom-2 left-2 lg:left-10">
+              <button className="bg-primary lg:py-2 py-1 lg:px-6 px-2 mb-3 text-white text-sm lg:text-base lg:font-semibold rounded">
                 GAMING
               </button>
-              <h2 className="text-4xl font-semibold text-white">
+              <h2 className="text-base lg:text-4xl font-semibold text-white">
                 Apple’s AR/VR Headsets are Expected <br />
                 to launch in 1st Quarter of 2024
               </h2>
-              <p className="text-zinc-300 mt-3">Abdullah - Jan 5, 2024</p>
+              <p className="text-zinc-300 lg:mt-3 lg:text-base text-sm">
+                Abdullah - Jan 5, 2024
+              </p>
             </div>
           </div>
         </div>
