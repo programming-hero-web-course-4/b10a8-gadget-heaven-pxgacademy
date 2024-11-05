@@ -5,8 +5,7 @@ import { useLoaderData } from "react-router-dom";
 
 const Dashboard = () => {
   const [cart, setCart] = useState("cart");
-  const data = useLoaderData()
-  
+  const data = useLoaderData();
 
   return (
     <section>
@@ -23,20 +22,24 @@ const Dashboard = () => {
           <div className="flex justify-center items-center gap-5 mt-8">
             <button
               onClick={() => setCart("cart")}
-              className="text-primary font-semibold bg-white py-2 px-8 rounded-full border border-white"
+              className={`font-semibold  py-2 px-8 rounded-full border border-white
+                ${cart === "cart" ? 'bg-white text-primary' : 'bg-transparent text-white'}  `}
             >
               Cart
             </button>
             <button
               onClick={() => setCart("Wishlist")}
-              className="bg-transparent text-white font-semibold py-2 px-8 rounded-full border border-white"
+              className={`font-semibold py-2 px-8 rounded-full border border-white
+                ${cart === "cart" ? 'bg-transparent text-white' : 'bg-white text-primary'}`}
             >
               Wishlist
             </button>
           </div>
         </div>
       </div>
-      <div className="">{cart === "cart" ? <CartList data={data} /> : <Wishlist />}</div>
+      <div className="">
+        {cart === "cart" ? <CartList data={data} /> : <Wishlist data={data} />}
+      </div>
     </section>
   );
 };

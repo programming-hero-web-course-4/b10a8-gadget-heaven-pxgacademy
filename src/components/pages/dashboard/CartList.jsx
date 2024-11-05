@@ -53,9 +53,10 @@ const CartList = ({ data }) => {
           <div className="flex items-center gap-4">
             <p className="font-semibold">Total cost: ${totalCost} </p>
             <button
-            onClick={handleSortByPrice}
-            className="py-2 px-6 border-2 border-primary rounded-full flex items-center gap-2">
-              Sort by price <BsSortNumericDownAlt/>
+              onClick={handleSortByPrice}
+              className="py-2 px-6 border-2 border-primary rounded-full flex items-center gap-2"
+            >
+              Sort by price <BsSortNumericDownAlt />
             </button>
             <button className="py-2 px-6 border-2 border-primary rounded-full bg-primary text-white">
               Purchase
@@ -71,6 +72,11 @@ const CartList = ({ data }) => {
               handleClearFromLS={handleClearFromLS}
             />
           ))}
+        </div>
+        <div>
+          {filteredData.length <= 0 && (
+            <h2 className="text-xl font-semibold text-center">No Data Found</h2>
+          )}
         </div>
       </div>
     </section>
