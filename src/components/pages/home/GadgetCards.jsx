@@ -26,13 +26,13 @@ const GadgetCards = ({ data }) => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto mt-[500px]">
-      <h2 className="text-4xl font-semibold text-center">
+    <div className="max-w-7xl mx-auto mt-10 md:mt-80 lg:mt-[500px]">
+      <h2 className="lg:text-4xl text-2xl font-semibold text-center">
         Explore Cutting-Edge Gadgets
       </h2>
 
-      <div className="flex gap-x-5 mt-14">
-        <div className="w-[20%]">
+      <div className="lg:flex gap-x-5 mt-14">
+        <div className="lg:w-[20%] mb-5 lg:mb-0">
           <ul className="bg-white p-5 flex flex-col gap-3  rounded-2xl border border-zinc-200">
             {cardList.map((list, index) => (
               <CardList
@@ -46,7 +46,7 @@ const GadgetCards = ({ data }) => {
           </ul>
         </div>
 
-        <div className="w-[80%] grid grid-cols-3 gap-5">
+        <div className="lg:w-[80%] grid lg:grid-cols-3 gap-5">
           {filteredData().map((item, index) => (
             <ProductCard key={index} item={item} />
           ))}

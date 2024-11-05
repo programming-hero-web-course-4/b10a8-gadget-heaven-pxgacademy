@@ -21,7 +21,7 @@ const Home = () => {
         Home | Gadget Heaven
       </title>
     </Helmet>
-    <section className="px-8 pb-16">
+    <section className="lg:px-8 px-5 pb-16">
       <Banner />
       <GadgetCards data={cards} />
     </section>

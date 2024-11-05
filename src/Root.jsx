@@ -9,7 +9,7 @@ export const WishLength = createContext(0);
 function Root() {
   const [cartLength, setCartLength] = useState(0);
   const [wishLength, setWishLength] = useState(0);
-  console.log(cartLength);
+
   return (
     <>
       <WishLength.Provider value={[wishLength, setWishLength]}>
