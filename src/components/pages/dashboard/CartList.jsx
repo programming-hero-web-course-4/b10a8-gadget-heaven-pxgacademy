@@ -7,7 +7,7 @@ import pIcon from "../../../assets/Group.png";
 import { CartLength } from "../../../Root";
 
 const CartList = ({ data }) => {
-  const [cartLength, setCartLength] = useContext(CartLength);
+  const [, setCartLength] = useContext(CartLength);
   const [filteredData, setFilteredData] = useState([]);
   const [totalCost, setTotalCost] = useState(0);
   const storedData = getFromLS("Cart");
@@ -63,9 +63,9 @@ const CartList = ({ data }) => {
   return (
     <section className="px-5">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row gap-5 justify-between mt-8">
+        <div className="flex flex-col md:flex-row items-center gap-5 justify-between mt-8">
           <h3 className="text-xl font-semibold">Cart</h3>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-col md:flex-row items-center gap-4">
             <p className="font-semibold">Total cost: ${totalCost} </p>
             <button
               onClick={handleSortByPrice}

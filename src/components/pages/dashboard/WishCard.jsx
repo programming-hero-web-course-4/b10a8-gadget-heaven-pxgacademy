@@ -9,11 +9,11 @@ const WishCard = ({ item, handleClearFromLS }) => {
   const [wishLength, setWishLength] = useContext(WishLength);
   const { productID, image, productName, price, description } = item;
   return (
-    <div className="flex items-center border border-zinc-300 rounded-2xl p-5">
-      <div className="max-w-60">
+    <div className="flex flex-col md:flex-row items-center border border-zinc-300 rounded-2xl p-5">
+      <div className="md:max-w-60 w-full mb-6 md:mb-0">
         <img className="w-full rounded-xl" src={image} alt="" />
       </div>
-      <div className="flex justify-between items-center flex-grow ml-6">
+      <div className="flex gap-x-7 justify-between items-center flex-grow md:ml-6">
         <div className="space-y-2">
           <h3 className="text-2xl font-semibold">{productName}</h3>
           <p className="text-zinc-500">{description}</p>

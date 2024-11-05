@@ -7,8 +7,8 @@ import { toast } from "react-toastify";
 import { CartLength, WishLength } from "../Root";
 
 const ShowDetails = () => {
-  const [cartLength, setCartLength] = useContext(CartLength)
-  const [wishLength, setWishLength] = useContext(WishLength)
+  const [cartLength, setCartLength] = useContext(CartLength);
+  const [wishLength, setWishLength] = useContext(WishLength);
   const [cartBtnDisable, setCartBtnDisable] = useState(false);
   const [wishBtnDisable, setWishBtnDisable] = useState(false);
   const { pId } = useParams();
@@ -25,7 +25,7 @@ const ShowDetails = () => {
   return (
     <section>
       <div className="bg-primary w-full px-5">
-        <div className="max-w-7xl mx-auto pt-14 pb-40">
+        <div className="max-w-7xl mx-auto pt-14 pb-20 md:pb-40">
           <div className="text-white text-center max-w-2xl mx-auto">
             <h2 className="text-4xl font-semibold mb-2">Product Details</h2>
             <p>
@@ -69,7 +69,7 @@ const ShowDetails = () => {
                   <button
                     onClick={() => {
                       handleLS("Cart");
-                      toast.success('Product successfully added to Cart')
+                      toast.success("Product successfully added to Cart");
                       setCartLength(cartLength + 1);
                       setCartBtnDisable(true);
                     }}
@@ -81,7 +81,7 @@ const ShowDetails = () => {
                   <button
                     onClick={() => {
                       handleLS("Wish");
-                      toast.success('Product successfully added to Wishlist')
+                      toast.success("Product successfully added to Wishlist");
                       setWishLength(wishLength + 1);
                       setWishBtnDisable(true);
                     }}
