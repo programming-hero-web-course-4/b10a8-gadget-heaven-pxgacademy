@@ -69,14 +69,18 @@ const CartList = ({ data }) => {
         <div className="flex flex-col md:flex-row items-center gap-5 justify-between mt-8">
           <h3 className="text-xl font-semibold">Cart</h3>
           <div className="flex flex-col md:flex-row items-center gap-4">
-            <p className="font-semibold">Total cost: ${totalCost.toFixed(2)} </p>
+            <p className="font-semibold">
+              Total cost: ${totalCost.toFixed(2)}{" "}
+            </p>
             <button
+              disabled={filteredData.length <= 0}
               onClick={handleSortByPrice}
               className="py-2 px-6 border-2 border-primary rounded-full flex items-center gap-2"
             >
               Sort by price <BsSortNumericDownAlt />
             </button>
             <button
+              disabled={filteredData.length <= 0}
               onClick={handlePurchase}
               className="py-2 px-6 border-2 border-primary rounded-full bg-primary text-white"
             >
@@ -109,7 +113,9 @@ const CartList = ({ data }) => {
               Payment Successfully Paid!
             </h3>
             <p className="py-4 text-xl text-zinc-500">Thanks for purchasing.</p>
-            <p className="text-lg font-semibold">Total: ${totalCost}</p>
+            <p className="text-lg font-semibold">
+              Total: ${totalCost.toFixed(2)}
+            </p>
             <div className="modal-action">
               <form method="dialog" className="w-full">
                 <button
