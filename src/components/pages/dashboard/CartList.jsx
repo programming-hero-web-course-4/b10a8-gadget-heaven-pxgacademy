@@ -5,12 +5,14 @@ import CartCard from "./CartCard";
 import { BsSortNumericDownAlt } from "react-icons/bs";
 import pIcon from "../../../assets/Group.png";
 import { CartLength } from "../../../Root";
+import { useNavigate } from "react-router-dom";
 
 const CartList = ({ data }) => {
   const [, setCartLength] = useContext(CartLength);
   const [filteredData, setFilteredData] = useState([]);
   const [totalCost, setTotalCost] = useState(0);
   const storedData = getFromLS("Cart");
+  const navigate = useNavigate();
 
   const loadFromLS = () => {
     let storedC_Data = [];
@@ -58,6 +60,7 @@ const CartList = ({ data }) => {
     setFilteredData([]);
     clearLS("Cart");
     setCartLength(0);
+    navigate("/");
   };
 
   return (
