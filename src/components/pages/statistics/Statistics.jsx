@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useLoaderData } from "react-router-dom";
 import {
@@ -11,21 +10,23 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+
 const Statistics = () => {
   const data = useLoaderData();
   const [newData, setNewData] = useState([]);
 
   const handleNewData = () => {
-    let dData = [];
-    data.map((item) => {
-      item.ratings = item.ratings * 50;
-      dData.push(item);
-    });
+    const dData = data.map((item) => ({
+      ...item,
+      ratings: item.ratings * 50,
+    }));
 
     setNewData(dData);
   };
 
-  useEffect(() => handleNewData, [data]);
+  useEffect(() => {
+    handleNewData();
+  }, [data]);
 
   return (
     <>
