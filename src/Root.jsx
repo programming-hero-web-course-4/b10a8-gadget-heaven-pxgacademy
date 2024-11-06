@@ -12,8 +12,8 @@ function Root() {
 
   return (
     <>
-      <WishLength.Provider value={[wishLength, setWishLength]}>
-        <CartLength.Provider value={[cartLength, setCartLength]}>
+      <WishLength.Provider value={{wishLength, setWishLength}}>
+        <CartLength.Provider value={{cartLength, setCartLength}}>
           <Header />
           <Outlet />
           <Footer />

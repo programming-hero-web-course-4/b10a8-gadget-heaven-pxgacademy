@@ -5,7 +5,7 @@ import { CartLength } from "../../../Root";
 import { toast } from "react-toastify";
 
 const CartCard = ({ item, handleClearFromLS }) => {
-  const [cartLength, setCartLength] = useContext(CartLength);
+  const {cartLength, setCartLength} = useContext(CartLength);
   const { productID, image, productName, price, description } = item;
   return (
     <div className="flex flex-col md:flex-row items-center border border-zinc-300 rounded-2xl p-5">

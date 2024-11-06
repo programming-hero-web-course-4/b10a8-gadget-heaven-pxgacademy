@@ -8,7 +8,7 @@ import { CartLength } from "../../../Root";
 import { useNavigate } from "react-router-dom";
 
 const CartList = ({ data }) => {
-  const [, setCartLength] = useContext(CartLength);
+  const { setCartLength } = useContext(CartLength);
   const [filteredData, setFilteredData] = useState([]);
   const [totalCost, setTotalCost] = useState(0);
   const storedData = getFromLS("Cart");
@@ -69,7 +69,7 @@ const CartList = ({ data }) => {
         <div className="flex flex-col md:flex-row items-center gap-5 justify-between mt-8">
           <h3 className="text-xl font-semibold">Cart</h3>
           <div className="flex flex-col md:flex-row items-center gap-4">
-            <p className="font-semibold">Total cost: ${totalCost} </p>
+            <p className="font-semibold">Total cost: ${totalCost.toFixed(2)} </p>
             <button
               onClick={handleSortByPrice}
               className="py-2 px-6 border-2 border-primary rounded-full flex items-center gap-2"

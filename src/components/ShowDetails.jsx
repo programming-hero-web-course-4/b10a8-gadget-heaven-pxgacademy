@@ -7,8 +7,8 @@ import { toast } from "react-toastify";
 import { CartLength, WishLength } from "../Root";
 
 const ShowDetails = () => {
-  const [cartLength, setCartLength] = useContext(CartLength);
-  const [wishLength, setWishLength] = useContext(WishLength);
+  const {cartLength, setCartLength} = useContext(CartLength);
+  const {wishLength, setWishLength} = useContext(WishLength);
   const [cartBtnDisable, setCartBtnDisable] = useState(false);
   const [wishBtnDisable, setWishBtnDisable] = useState(false);
   const { pId } = useParams();

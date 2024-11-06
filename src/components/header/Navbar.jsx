@@ -8,8 +8,8 @@ import Hamburger from "hamburger-react";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
-  const [cartLength, setCartLength] = useContext(CartLength);
-  const [wishLength, setWishLength] = useContext(WishLength);
+  const {cartLength, setCartLength} = useContext(CartLength);
+  const {wishLength, setWishLength} = useContext(WishLength);
   const location = useLocation();
   const pathName = location.pathname;
 
@@ -92,17 +92,23 @@ const Navbar = () => {
                 <FaShoppingCart />
               </button>
             </Link>
-            <span className="absolute -top-5 left-7 bg-white py-1 px-2 text-red-500 rounded-full">
-              {cartLength}
-            </span>
+            {cartLength > 0 && (
+              <span className="absolute -top-5 left-7 bg-white py-1 px-2 text-red-500 rounded-full">
+                {cartLength}
+              </span>
+            )}
           </div>
           <div className="relative">
-            <button className="bg-zinc-100 p-2 rounded-full text-xl">
-              <FaHeart />
-            </button>
-            <span className="absolute -top-5 left-7 bg-white py-1 px-2 text-red-500 rounded-full">
-              {wishLength}
-            </span>
+            <Link to="/dashboard">
+              <button className="bg-zinc-100 p-2 rounded-full text-xl">
+                <FaHeart />
+              </button>
+            </Link>
+            {wishLength > 0 && (
+              <span className="absolute -top-5 left-7 bg-white py-1 px-2 text-red-500 rounded-full">
+                {wishLength}
+              </span>
+            )}
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ import { setToLS } from "../../../utils/LocalStorage";
 import { WishLength } from "../../../Root";
 
 const WishCard = ({ item, handleClearFromLS }) => {
-  const [wishLength, setWishLength] = useContext(WishLength);
+  const {wishLength, setWishLength} = useContext(WishLength);
   const { productID, image, productName, price, description } = item;
   return (
     <div className="flex flex-col md:flex-row items-center border border-zinc-300 rounded-2xl p-5">
