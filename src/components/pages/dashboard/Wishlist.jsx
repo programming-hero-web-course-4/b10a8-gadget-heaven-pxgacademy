@@ -6,7 +6,7 @@ import { BsSortNumericDown } from "react-icons/bs";
 import { WishLength } from "../../../Root";
 
 const Wishlist = ({ data }) => {
-  const {setWishLength} = useContext(WishLength)
+  const { setWishLength } = useContext(WishLength);
   const [wishlistData, setWishlistData] = useState([]);
   const storedData = getFromLS("Wish");
 
@@ -40,7 +40,7 @@ const Wishlist = ({ data }) => {
   const handleClearAll = () => {
     clearLS("Wish");
     setWishlistData([]);
-    setWishLength(0)
+    setWishLength(0);
   };
 
   return (
@@ -61,7 +61,7 @@ const Wishlist = ({ data }) => {
 
             <button
               disabled={wishlistData <= 0}
-              onClick={() => handleClearAll}
+              onClick={handleClearAll}
               className="py-2 px-5 rounded-full border border-primary text-primary"
             >
               Clear All
